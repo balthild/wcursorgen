@@ -1,0 +1,12 @@
+[package]
+name = "wcursorgen"
+description = "Generating windows cursor file from PNGs and xcursorgen config."
+license = "GPL-3.0-or-later"
+version = "0.1.0"
+authors = ["Balthild <ibalthild@gmail.com>"]
+edition = "2018"
+
+[dependencies]
+anyhow = "1.0.34"
+clap = "3.0.0-beta.2"
+riff-ani = "0.1.0"
