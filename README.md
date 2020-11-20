@@ -1,6 +1,6 @@
 # wcursorgen
 
-This program reads the config file to find the list of cursor x2 in PNG format along with their hotspot and nominal size, then converts all of the x2 to CUR or ANI format.
+This program reads the config file to find the list of cursor images in PNG format along with their hotspot and nominal size, then converts all the images to CUR or ANI format.
 
 The config file format is the same with xcursorgen. Each line in the config is of the form:
 
@@ -35,9 +35,14 @@ OPTIONS:
             appended according to whether the cursor is animated)
 
     -p, --prefix <prefix>
-            Find cursor x2 in the directory. If not specified, the current directory is used
+            Find cursor images in the directory. If not specified, the current directory is used
 
     -s, --size <size>
-            Choose which size to generate. Unlike xcursor, one ANI file cannot contain multiple x2
-            in different sizes, so we must pick up one. The size specified must exist in the config
+            Choose which size to generate. Unlike X11 cursor, one ANI file cannot contain multiple
+            images in different sizes, so we must pick up one. The size specified must exist in the
+            config
 ```
+
+## Credits
+
+- [xcursorgen](https://gitlab.freedesktop.org/xorg/app/xcursorgen)

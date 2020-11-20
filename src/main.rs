@@ -7,8 +7,8 @@ use std::fs::File;
 use std::io::Read;
 use std::path::{Path, PathBuf};
 
-/// This program reads the config file to find the list of cursor x2 in PNG format along with
-/// their hotspot and nominal size, then converts all of the x2 to CUR or ANI format.
+/// This program reads the config file to find the list of cursor images in PNG format along with
+/// their hotspot and nominal size, then converts all of the images to CUR or ANI format.
 ///
 /// The config file format is the same with xcursorgen. Each line in the config is of the form:
 ///
@@ -24,18 +24,19 @@ use std::path::{Path, PathBuf};
 #[derive(Clap, Debug)]
 #[clap(version = "0.1", author = "Balthild <ibalthild@gmail.com>")]
 struct Opts {
-    /// The path of config file
+    /// The path of config file.
     #[clap(short, long)]
     config: PathBuf,
-    /// Find cursor x2 in the directory. If not specified, the current directory is used.
+    /// Find cursor images in the directory. If not specified, the current directory is used.
     #[clap(short, long)]
     prefix: Option<PathBuf>,
     /// The path of output file without file ext (a .cur or .ani ext will be
-    /// automatically appended according to whether the cursor is animated)
+    /// automatically appended according to whether the cursor is animated).
     #[clap(short, long)]
     output: PathBuf,
-    /// Choose which size to generate. Unlike xcursor, one ANI file cannot contain multiple x2
-    /// in different sizes, so we must pick up one. The size specified must exist in the config.
+    /// Choose which size to generate. Unlike X11 cursor, one ANI file cannot contain multiple
+    /// images in different sizes, so we must pick up one. The size specified must exist in the
+    /// config.
     #[clap(short, long)]
     size: u16,
 }
