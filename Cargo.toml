@@ -2,9 +2,10 @@
 name = "wcursorgen"
 description = "Generating windows cursor file from PNGs and xcursorgen config."
 license = "GPL-3.0-or-later"
-version = "0.1.0"
+version = "0.1.1"
 authors = ["Balthild <ibalthild@gmail.com>"]
 edition = "2018"
+repository = "https://github.com/balthild/wcursorgen"
 
 [dependencies]
 anyhow = "1.0.34"
